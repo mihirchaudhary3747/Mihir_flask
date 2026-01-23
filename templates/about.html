@@ -1,40 +1,88 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <title>Mihir Chaudhary Portfolio</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
-<body>
+{% extends "base.html" %}
 
-    <div class= "upper-section">
-        <h1 id=start >Portfolio</h1>
+{% block content %}
 
-        <img src="https://0994c19e-0830-4b08-a1f7-9065a14a7d24-00-32oz2oo8oksh4.pike.replit.dev/static/IMG_3325.JPG" 
-           class="profile-pic"
-            alt="mihir profile photo">
+<!-- HERO SECTION -->
+<div class="hero-dark text-white py-5 shadow-lg">
+  <div class="container">
 
-        <h2 id = "start2">My Basic Projects and Data Science Story</h2>
+    <div class="row align-items-center">
+
+      <!-- LEFT: TEXT --> 
+      <div class="col-md-8 text-center mb-4 mb-md-0">
+        <h1 class="fw-bold text-dark">Portfolio</h1>
+        <p class="fs-2">
+          My Basic Projects and Data Science Story
+        </p>
+      </div>
+
+      <!-- RIGHT: PHOTO -->
+      <div class="col-md-4 text-center">
+        <img
+          src="{{ url_for('static', filename='IMG_3325.JPG') }}"
+          alt="profile photo"
+            class="img-fluid rounded shadow-sm"
+          style="max-width: 170px;"
+        >
+      </div>
+
     </div>
-    
-    
-    <div class= "para">
-        <h1>About Me</h1>
-        <p>I am an MCA student with a strong interest in Data Science, Python programming, and web development. I enjoy working with data, building analytical projects, and creating simple yet effective web applications using Flask.
 
-        I have hands-on experience with Python, Pandas, NumPy, and basic machine learning concepts, and I continuously improve my skills through practice projects and internships. Along with data analysis, I am also learning full-stack fundamentals to understand how data-driven applications are designed and deployed.
+  </div>
+</div>
 
-        This portfolio represents my learning journey, projects, and experiments in Data Science and web development. I am currently seeking entry-level opportunities where I can apply my skills, learn from real-world projects, and grow as a professional.</p>
+
+<div class="para">
+    <h1>About Me</h1>
+    <p id="size">
+        I am an MCA student with a strong interest in Data Science, Python programming,
+        and web development. I enjoy working with data, building analytical projects,
+        and creating simple yet effective web applications using Flask.
+
+        I have hands-on experience with Python, Pandas, NumPy, and basic machine learning
+        concepts, and I continuously improve my skills through practice projects and internships.
+
+        This portfolio represents my learning journey, projects, and experiments in Data Science
+        and web development. I am currently seeking entry-level opportunities where I can apply
+        my skills, learn from real-world projects, and grow as a professional.
+    </p>
+</div>
+
+<div class="row mt-5">
+
+  <!-- MOTIVATION COLUMN -->
+  <div class="col-md-6 mb-4">
+    <div class="p-4 border rounded shadow-sm h-100">
+      <h2>Motivation</h2>
+      <p>
+        A collection of motivational thoughts that inspire me to stay disciplined
+        and consistent in my learning journey.
+      </p>
+      <a href="/motivation" class="btn btn-primary">
+        View Motivation
+      </a>
     </div>
-    
-    <nav>
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-    </nav>
-    <main>
-        <p>This is a Flask practice project by Mihir.</p>
-    </main>
-</body>
-</html>
+  </div>
+
+  <!-- RESUME COLUMN -->
+  <div class="col-md-6 mb-4">
+    <div class="p-4 border rounded shadow-sm h-100">
+      <h2>Resume</h2>
+      <p>
+        My professional resume showcasing education, skills, and projects
+        related to Data Science and Web Development.
+      </p>
+      <a href="/resume" class="btn btn-primary">
+        Click Here
+      </a>
+    </div>
+  </div>
+
+</div>
+
+
+<footer class="mt-5 text-center">
+    This is a Flask practice project by Mihir.
+</footer>
+
+{% endblock %}
