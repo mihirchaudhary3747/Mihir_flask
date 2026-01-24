@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container my-5">
+
+  <!-- PAGE HEADING -->
+  <div class="text-center mb-4">
+    <h1 class="fw-bold">Motivation</h1>
+    <p class="fs-5 text-muted">
+      Thoughts that keep me focused and consistent
+    </p>
+  </div>
+
+  <!-- QUOTES SECTION -->
+  <div class="row justify-content-center">
+
+    <div class="col-md-8">
+
+      <div class="card p-4 mb-3 shadow-sm">
+        <p class="fs-4 fst-italic text-center">
+          “Discipline beats motivation.”
+        </p>
+      </div>
+
+      <div class="card p-4 mb-3 shadow-sm">
+        <p class="fs-4 fst-italic text-center">
+          “Consistency creates confidence.”
+        </p>
+      </div>
+
+      <div class="card p-4 mb-3 shadow-sm">
+        <p class="fs-4 fst-italic text-center">
+          “Small progress is still progress.”
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- ROADMAP IMAGE SECTION -->
+<div class="container-fluid mt-5 px-0">
+  <img
+    src="{{ url_for('static', filename='data_science_roadmap.png') }}"
+    class="img-fluid roadmap-img"
+    alt="Data Scientist Roadmap"
+  >
+</div>
+
+{% endblock %}
