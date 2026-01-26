@@ -1,6 +1,7 @@
 import sqlite3
 from flask import Flask, render_template,request, redirect, url_for
 
+
 app = Flask(__name__)
 
 
@@ -28,7 +29,8 @@ create_table()
 @app.route("/")
 def hello_world():
   return render_template('about.html')
-  
+
+
 @app.route('/motivation', methods=["GET", "POST"])
 def mtv():
     if request.method == "POST":
@@ -45,8 +47,13 @@ def mtv():
         conn.close()
 
         return redirect(url_for("hello_world"))
+    return render_template("motivation.html")
 
-    return render_template('motivation.html')
+
+
+
+
+        
   
   
 @app.route("/resume")
